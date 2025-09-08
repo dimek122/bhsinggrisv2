@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dims quiz bhs inggris</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="start-container">
+            <h1 class="quiz-title">Dims Quiz Bahasa Inggris</h1>
+            <p class="quiz-subtitle">Materi Kelas 9 </p>
+            <div class="input-group">
+                <label for="username">your name:</label>
+                <input type="text" id="username" placeholder="Masukkan nama...">
+            </div>
+            <div class="input-group">
+                <label for="song-select">choose song:</label>
+                <select id="song-select">
+                    <option value="song1.mp3">bergema sampai selamanya</option>
+                    <option value="song2.mp3">sempurna</option>
+                    <option value="song3.mp3">penjaga hati x bergema </option>
+                    <option value="no-audio">Tanpa Audio</option>
+                </select>
+            </div>
+            <button id="start-btn" class="google-btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-container" class="hidden">
+            <p id="timer">Waktu: 25:00</p>
+            <div id="quiz-question"></div>
+            <div id="quiz-options" class="options-grid"></div>
+            <button id="next-btn" class="google-btn">Next</button>
+        </div>
+
+        <div id="result-container" class="hidden">
+            <h2 id="result-title">Hasil Kuis</h2>
+            <div class="result-summary">
+                <p>Nama: <span id="result-name"></span></p>
+                <p>Skor: <span id="final-score"></span></p>
+                <p>Jawaban Benar: <span id="correct-count"></span></p>
+                <p>Jawaban Salah: <span id="wrong-count"></span></p>
+                <p>Waktu Pengerjaan: <span id="time-taken"></span></p>
+            </div>
+            <div id="result-details"></div>
+            <button id="restart-btn" class="google-btn">Ulangi Kuis</button>
+        </div>
+    </div>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
