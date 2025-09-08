@@ -104,12 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
         playlist.push(...otherSongs);
         
         currentSongIndex = 0;
-        audio.src = `audio/${playlist[currentSongIndex]}`;
+        audio.src = playlist[currentSongIndex]; // PATH SUDAH DIKOREKSI
         audio.play().catch(e => console.error("Error playing audio:", e));
         
         audio.onended = () => {
             currentSongIndex = (currentSongIndex + 1) % playlist.length;
-            audio.src = `audio/${playlist[currentSongIndex]}`;
+            audio.src = playlist[currentSongIndex]; // PATH SUDAH DIKOREKSI
             audio.play().catch(e => console.error("Error playing audio:", e));
         };
     }
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nextBtn.classList.add('hidden');
     }
 
-    // Fungsi saat pengguna memilih jawaban (DIKOREKSI)
+    // Fungsi saat pengguna memilih jawaban
     function selectAnswer(e) {
         const selectedOption = e.target;
         const userAnswer = selectedOption.dataset.answer;
